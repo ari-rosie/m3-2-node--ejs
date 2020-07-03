@@ -54,8 +54,8 @@ const q4 = (req, res) => {
 // -----------------------------------------------
 const q5 = (req, res) => {
   const popularGirlNames = ['Olivia', 'Ruby', 'Emily', 'Grace', 'Jessica'];
-
-  res.render('pages/question5');
+  const title = "Top 5 girls names in the England and Wales";
+  res.render('pages/question5', {title, popularGirlNames});
 };
 
 // We export the functions so that they may be 'required' or imported in other files.

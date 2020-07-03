@@ -11,9 +11,16 @@
     <h2>Part 1</h2>
     <div class="content">
       <%- include('../partials/questions/5') %>
-      <div class="box answer">
+      <div class="box">
         <h3>Answer</h3>
-        <!-- render answer here -->
+        <div class="girl_names">
+          <h4> <%= title %> </h4>
+          <ol>
+          <% popularGirlNames.forEach(name => { %>
+            <li> <%= name %> </li>
+          <% }) %> 
+          </ol>
+        </div>
       </div>
     </div>
   </div>
