@@ -13,7 +13,15 @@
       <%- include('../partials/questions/3') %>
       <div class="box answer">
         <h3>Answer</h3>
-        <!-- render answer here -->
+        <img src= "<%= homer.imageUrl %>" />
+        <ul>
+          <% const {name, dob, profession, favoriteFood, favoriteBeverage} = homer %>
+          <li> <%= name %> </li>
+          <li> <%= dob %> </li>
+          <li> <%= profession %> </li>
+          <li> <%= favoriteFood %> </li>
+          <li> <%= favoriteBeverage %> </li>
+        </ul>
       </div>
     </div>
   </div>
