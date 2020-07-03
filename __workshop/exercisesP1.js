@@ -43,7 +43,10 @@ const q3 = (req, res) => {
 const q4 = (req, res) => {
   const popularGirlNames = ['Olivia', 'Ruby', 'Emily', 'Grace', 'Jessica'];
 
-  res.render('pages/question4');
+  res.render('pages/question4', {
+    names: popularGirlNames
+    .filter(name => popularGirlNames.indexOf(name) < 3)
+  });
 };
 
 // -----------------------------------------------

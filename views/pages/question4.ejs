@@ -13,7 +13,9 @@
       <%- include('../partials/questions/4') %>
       <div class="box answer">
         <h3>Answer</h3>
-        <!-- render answer here -->
+        <% names.forEach(name => { %>
+        <p><%= name %></p>
+        <% }) %>
       </div>
     </div>
   </div>
