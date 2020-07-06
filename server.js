@@ -3,15 +3,16 @@
 // import the needed node_modules.
 const express = require('express');
 const morgan = require('morgan');
+const url = require('url');
 
 // We need to "require" the files whose content we reference in this file.
 const exercisesP1 = require('./__workshop/exercisesP1');
 
-const q6 = (req, res) => res.render('pages/question6');
-const q7 = (req, res) => res.render('pages/question7');
-const q8 = (req, res) => res.render('pages/question8');
-const q9 = (req, res) => res.render('pages/question9');
-const q10 = (req, res) => res.render('pages/question10');
+const q6 = (req, res) => res.render('pages/question6', {data: req.url});
+const q7 = (req, res) => res.render('pages/question7', {data: req.url});
+const q8 = (req, res) => res.render('pages/question8', {data: req.url});
+const q9 = (req, res) => res.render('pages/question9', {data: req.url});
+const q10 = (req, res) => res.render('pages/question10', {data: req.url});
 
 express()
   // This will give us will log more info to the console. see https://www.npmjs.com/package/morgan
@@ -35,7 +36,7 @@ express()
 
   // this serves up the homepage
   .get('/', (req, res) => {
-    res.send("This is the homepage... it's empty :(");
+    res.render('pages/homepage');
   })
 
   // this is our catch all endpoint. If a user navigates to any endpoint that is not

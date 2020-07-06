@@ -61,3 +61,29 @@ ol, ul { margin-bottom: 1em; }
         min-height: 500px;
     }
 }
+
+/*** HOMEPAGE ***/
+.home_main {
+    margin-top: 30px;
+}
+
+.home_main ul li {
+    text-align: center;
+    width: 100%;
+    background-color: firebrick;
+
+}
+
+.home_main a {
+    text-decoration: none;
+    color: lightblue;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.home_main a:hover {
+    color: firebrick;
+    background-color: navajowhite;
+
+}

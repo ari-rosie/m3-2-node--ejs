@@ -1,3 +1,10 @@
 <header>
     <h1>Node: Workshop 2</h1>
+    <% let page = data.slice(9); let next = parseInt(page) + 1; let prev = parseInt(page) - 1; %>
+    <% if (parseInt(page) < 10) { %>
+        <a href="/question<%=next%>">next</a>
+    <% } %>
+    <% if (parseInt(page) > 1) { %>
+    <a href="/question<%=prev%>">previous</a>
+    <% } %>
 </header>
